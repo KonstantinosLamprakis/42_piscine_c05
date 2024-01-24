@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: klamprak <klamprak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 12:37:25 by klamprak          #+#    #+#             */
-/*   Updated: 2024/01/24 13:46:10 by klamprak         ###   ########.fr       */
+/*   Created: 2024/01/24 13:41:30 by klamprak          #+#    #+#             */
+/*   Updated: 2024/01/24 13:47:16 by klamprak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,16 @@ int	ft_is_prime(int nb)
 	return (1);
 }
 
+int	ft_find_next_prime(int nb)
+{
+	while (!ft_is_prime(nb))
+	{
+		nb++;
+	}
+	return (nb);
+}
+
 // int	main(void)
 // {
-// 	int i;
-
-// 	i = 0;
-// 	while(i < 300)
-// 	{
-// 		if (ft_is_prime(i))
-// 			printf("%d ", i);
-// 		i++;
-// 	}
+// 	printf("%d", ft_find_next_prime(76));
 // }
