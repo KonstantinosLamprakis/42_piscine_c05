@@ -6,7 +6,7 @@
 /*   By: klamprak <klamprak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 10:01:26 by klamprak          #+#    #+#             */
-/*   Updated: 2024/01/25 10:39:47 by klamprak         ###   ########.fr       */
+/*   Updated: 2024/01/25 12:45:51 by klamprak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int	is_available(int chess_board[10][10], int row, int col)
 	return (check_diagonals(chess_board, row, col));
 }
 
-int	ft_ten_queens_puzzle(int chess_board[10][10], int col)
+int	recur_func(int chess_board[10][10], int col)
 {
 	int	i;
 	int	num;
@@ -96,7 +96,7 @@ int	ft_ten_queens_puzzle(int chess_board[10][10], int col)
 		if (is_available(chess_board, i, col))
 		{
 			chess_board[i][col] = 1;
-			num += ft_ten_queens_puzzle(chess_board, col + 1);
+			num += recur_func(chess_board, col + 1);
 			chess_board[i][col] = 0;
 		}
 		i++;
@@ -104,7 +104,7 @@ int	ft_ten_queens_puzzle(int chess_board[10][10], int col)
 	return (num);
 }
 
-int	ten_queens_puzzle(void)
+int	ft_ten_queens_puzzle(void)
 {
 	int	chess_board[10][10];
 	int	total_num;
@@ -122,11 +122,11 @@ int	ten_queens_puzzle(void)
 		}
 		i++;
 	}
-	total_num = ft_ten_queens_puzzle(chess_board, 0);
+	total_num = recur_func(chess_board, 0);
 	return (total_num);
 }
 
 // int	main(void)
 // {
-// 	printf("%d", ten_queens_puzzle());
+// 	printf("%d", ft_ten_queens_puzzle());
 // }

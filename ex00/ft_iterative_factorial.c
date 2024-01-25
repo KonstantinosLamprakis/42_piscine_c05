@@ -6,7 +6,7 @@
 /*   By: klamprak <klamprak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 09:01:14 by klamprak          #+#    #+#             */
-/*   Updated: 2024/01/24 09:19:08 by klamprak         ###   ########.fr       */
+/*   Updated: 2024/01/25 12:09:59 by klamprak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_iterative_factorial(int nb)
 	int	i;
 	int	fact;
 
-	if (nb <= 0)
+	if (nb < 0)
 		return (0);
 	i = 1;
 	fact = 1;
@@ -31,5 +31,5 @@ int	ft_iterative_factorial(int nb)
 
 // int	main(void)
 // {
-// 	printf("Fact is: %d", ft_iterative_factorial(-2));
+// 	printf("Fact is: %d", ft_iterative_factorial(0));
 // }

@@ -6,7 +6,7 @@
 /*   By: klamprak <klamprak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 11:04:54 by klamprak          #+#    #+#             */
-/*   Updated: 2024/01/24 11:24:23 by klamprak         ###   ########.fr       */
+/*   Updated: 2024/01/25 12:08:07 by klamprak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 int	ft_fibonacci(int index)
 {
-	int	i;
-
 	if (index < 0)
 		return (-1);
 	if (index == 0)
