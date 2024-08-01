@@ -6,7 +6,7 @@
 /*   By: klamprak <klamprak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 13:41:30 by klamprak          #+#    #+#             */
-/*   Updated: 2024/01/24 13:47:16 by klamprak         ###   ########.fr       */
+/*   Updated: 2024/01/25 15:54:34 by klamprak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int	ft_is_prime(int nb)
 
 int	ft_find_next_prime(int nb)
 {
+	if (nb < 1)
+		return (2);
 	while (!ft_is_prime(nb))
 	{
 		nb++;
